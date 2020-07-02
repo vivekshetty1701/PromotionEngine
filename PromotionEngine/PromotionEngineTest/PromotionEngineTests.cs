@@ -61,5 +61,46 @@ namespace PromotionEngineTest
             int result = promotionCalculator.GetPromotion(products, order, promotions);
             Assert.AreEqual(result, 100);
         }
+
+        [TestMethod]
+        public void OrderWithABPromotion()
+        {
+
+            IList<Product> products = GetProductCatalogue();
+
+            IList<Promotion> promotions = GetActivePromotion();
+
+            //product ordered
+            IList<Product> orderedProduct = new List<Product>();
+            orderedProduct.Add(new Product() { Name = 'A', Quantity = 5 });
+            orderedProduct.Add(new Product() { Name = 'B', Quantity = 5 });
+            orderedProduct.Add(new Product() { Name = 'C', Quantity = 1 });
+            Order order = new Order(orderedProduct);
+
+            PromotionCalculator promotionCalculator = new PromotionCalculator();
+            int result = promotionCalculator.GetPromotion(products, order, promotions);
+            Assert.AreEqual(result, 370);
+        }
+
+        [TestMethod]
+        public void OrderWithABCDPromotion()
+        {
+
+            IList<Product> products = GetProductCatalogue();
+
+            IList<Promotion> promotions = GetActivePromotion();
+
+            //product ordered
+            IList<Product> orderedProduct = new List<Product>();
+            orderedProduct.Add(new Product() { Name = 'A', Quantity = 3 });
+            orderedProduct.Add(new Product() { Name = 'B', Quantity = 5 });
+            orderedProduct.Add(new Product() { Name = 'C', Quantity = 1 });
+            orderedProduct.Add(new Product() { Name = 'D', Quantity = 1 });
+            Order order = new Order(orderedProduct);
+
+            PromotionCalculator promotionCalculator = new PromotionCalculator();
+            int result = promotionCalculator.GetPromotion(products, order, promotions);
+            Assert.AreEqual(result, 280);
+        }
     }
 }
