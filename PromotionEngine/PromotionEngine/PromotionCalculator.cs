@@ -20,13 +20,14 @@ namespace PromotionEngine
 
         private int PromotionHelper(Product[] products, Product[] orderedProducts, Promotion[] promotions)
         {
-            int minAmount = 0;
-            int noPromotionAmount = GetTotalAmount(products, orderedProducts);
+            int minAmount = GetTotalAmount(products, orderedProducts);
             for(int i = 0; i<promotions.Length; i++)
             {
                 Promotion promotion = promotions[i];
                 Product[] cloneOrderedProducts = new Product[orderedProducts.Length];
                 Array.Copy(orderedProducts, cloneOrderedProducts, orderedProducts.Length);
+
+                bool isPromotionApplied = true;
                 for(int j=0; j<orderedProducts.Length; j++)
                 {
                     Product custProduct = orderedProducts[j];
@@ -36,11 +37,14 @@ namespace PromotionEngine
                         break;
                     int remainingQuantity = custProduct.Quantity - promotionProduct.Quantity;
                     if (remainingQuantity < 0)
-                        break;
+                    {
+                        isPromotionApplied = false; break;
+                    }
                     cloneOrderedProducts[j].Quantity = remainingQuantity;
                 }
 
-                minAmount = Math.Min(noPromotionAmount, promotion.TotalSum + PromotionHelper(products, cloneOrderedProducts, promotions));
+                if(isPromotionApplied)
+                    minAmount = Math.Min(minAmount, promotion.TotalSum + PromotionHelper(products, cloneOrderedProducts, promotions));
             }
 
             return minAmount;
