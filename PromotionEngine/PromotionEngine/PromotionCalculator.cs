@@ -34,7 +34,9 @@ namespace PromotionEngine
                     //check exit in promotion
                     Product promotionProduct = promotion.Products.Where(p => p.Name.Equals(custProduct.Name)).FirstOrDefault();
                     if (promotionProduct == null)
-                        break;
+                    {
+                        isPromotionApplied = false; break;
+                    }
                     int remainingQuantity = custProduct.Quantity - promotionProduct.Quantity;
                     if (remainingQuantity < 0)
                     {
