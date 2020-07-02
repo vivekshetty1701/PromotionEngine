@@ -1,0 +1,11 @@
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp2.1\PromotionEngine.deps.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp2.1\PromotionEngine.runtimeconfig.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp2.1\PromotionEngine.runtimeconfig.dev.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp2.1\PromotionEngine.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp2.1\PromotionEngine.pdb
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.csprojAssemblyReference.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.csproj.CoreCompileInputs.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.AssemblyInfoInputs.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.AssemblyInfo.cs
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp2.1\PromotionEngine.pdb
