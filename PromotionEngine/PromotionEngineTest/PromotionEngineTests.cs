@@ -7,24 +7,19 @@ namespace PromotionEngineTest
     [TestClass]
     public class PromotionEngineTests
     {   
-
-        [TestMethod]
-        public void TestMethod1()
-        {   
+        private IList<Product> GetProductCatalogue()
+        {
             //product catalogue.
             IList<Product> products = new List<Product>();
             products.Add(new Product() { Name = 'A', Price = 50 });
             products.Add(new Product() { Name = 'B', Price = 30 });
             products.Add(new Product() { Name = 'C', Price = 20 });
             products.Add(new Product() { Name = 'D', Price = 15 });
+            return products;
+        }
 
-            //product ordered
-            IList<Product> orderedProduct = new List<Product>();
-            orderedProduct.Add(new Product() { Name = 'A', Quantity = 1 });
-            orderedProduct.Add(new Product() { Name = 'B', Quantity = 1 });
-            orderedProduct.Add(new Product() { Name = 'C', Quantity = 1 });
-            Order order = new Order(orderedProduct);
-
+        private IList<Promotion> GetActivePromotion()
+        {
             //Promotion
             IList<Promotion> promotions = new List<Promotion>();
 
@@ -43,6 +38,24 @@ namespace PromotionEngineTest
             promotionProductCD.Add(new Product() { Name = 'C', Quantity = 1 });
             promotionProductCD.Add(new Product() { Name = 'D', Quantity = 1 });
             promotions.Add(new Promotion(promotionProductCD, 30));
+
+            return promotions;
+        }
+
+        [TestMethod]
+        public void OrderWithNoPromotion()
+        {
+
+            IList<Product> products = GetProductCatalogue();
+
+            IList<Promotion> promotions = GetActivePromotion();
+
+            //product ordered
+            IList<Product> orderedProduct = new List<Product>();
+            orderedProduct.Add(new Product() { Name = 'A', Quantity = 1 });
+            orderedProduct.Add(new Product() { Name = 'B', Quantity = 1 });
+            orderedProduct.Add(new Product() { Name = 'C', Quantity = 1 });
+            Order order = new Order(orderedProduct);
 
             PromotionCalculator promotionCalculator = new PromotionCalculator();
             int result = promotionCalculator.GetPromotion(products, order, promotions);
