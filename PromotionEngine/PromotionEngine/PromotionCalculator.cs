@@ -20,7 +20,41 @@ namespace PromotionEngine
 
         private int PromotionHelper(Product[] products, Product[] orderedProducts, Promotion[] promotions)
         {
-            throw new NotImplementedException();
+            int minAmount = 0;
+            int noPromotionAmount = GetTotalAmount(products, orderedProducts);
+            for(int i = 0; i<promotions.Length; i++)
+            {
+                Promotion promotion = promotions[i];
+                Product[] cloneOrderedProducts = new Product[orderedProducts.Length];
+                Array.Copy(orderedProducts, cloneOrderedProducts, orderedProducts.Length);
+                for(int j=0; j<orderedProducts.Length; j++)
+                {
+                    Product custProduct = orderedProducts[j];
+                    //check exit in promotion
+                    Product promotionProduct = promotion.Products.Where(p => p.Name.Equals(custProduct.Name)).FirstOrDefault();
+                    if (promotionProduct == null)
+                        break;
+                    int remainingQuantity = custProduct.Quantity - promotionProduct.Quantity;
+                    if (remainingQuantity < 0)
+                        break;
+                    cloneOrderedProducts[j].Quantity = remainingQuantity;
+                }
+
+                minAmount = Math.Min(noPromotionAmount, promotion.TotalSum + PromotionHelper(products, cloneOrderedProducts, promotions));
+            }
+
+        }
+
+        private int GetTotalAmount(Product[] products, Product[] orderedProducts)
+        {
+            int sum = 0;
+            foreach(Product orderedProduct in orderedProducts)
+            {
+                int price = products.Where(p => p.Name.Equals(orderedProduct.Name)).First().Price;
+                sum += orderedProduct.Quantity * price;
+            }
+
+            return sum;
         }
     }
 }
