@@ -1,0 +1,17 @@
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngineTest.deps.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngineTest.runtimeconfig.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngineTest.runtimeconfig.dev.json
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngineTest.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngineTest.pdb
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngine.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\bin\Debug\netcoreapp2.1\PromotionEngine.pdb
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.csprojAssemblyReference.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.csproj.CoreCompileInputs.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.AssemblyInfoInputs.cache
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.AssemblyInfo.cs
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.csproj.CopyComplete
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.dll
+C:\Repository\Promotion\PromotionEngine\PromotionEngineTest\obj\Debug\netcoreapp2.1\PromotionEngineTest.pdb
