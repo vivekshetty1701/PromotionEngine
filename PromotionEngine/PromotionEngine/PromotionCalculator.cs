@@ -35,7 +35,7 @@ namespace PromotionEngine
                     Product promotionProduct = promotion.Products.Where(p => p.Name.Equals(custProduct.Name)).FirstOrDefault();
                     if (promotionProduct == null)
                     {
-                        isPromotionApplied = false; break;
+                        continue;
                     }
                     int remainingQuantity = custProduct.Quantity - promotionProduct.Quantity;
                     if (remainingQuantity < 0)
