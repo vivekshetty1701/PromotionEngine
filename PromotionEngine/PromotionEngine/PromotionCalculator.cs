@@ -43,6 +43,7 @@ namespace PromotionEngine
                 minAmount = Math.Min(noPromotionAmount, promotion.TotalSum + PromotionHelper(products, cloneOrderedProducts, promotions));
             }
 
+            return minAmount;
         }
 
         private int GetTotalAmount(Product[] products, Product[] orderedProducts)
