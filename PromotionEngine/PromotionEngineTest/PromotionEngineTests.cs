@@ -5,10 +5,8 @@ using System.Collections.Generic;
 namespace PromotionEngineTest
 {
     [TestClass]
-    public class UnitTest1
+    public class PromotionEngineTests
     {   
-
-
 
         [TestMethod]
         public void TestMethod1()
